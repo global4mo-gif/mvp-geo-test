@@ -11,6 +11,14 @@
   --surface-strong: #f0efed;
   --dark: #0c0a09;
   --success: #16a34a;
+  --blue: #0962d4;
+  --blue-soft: #dff0ff;
+  --purple: #6d28d9;
+  --purple-soft: #eee5ff;
+  --orange: #f97316;
+  --orange-soft: #fff0df;
+  --green: #159466;
+  --green-soft: #dcf7ec;
   --rose: #8f3939;
   --sky: #315f79;
   --mint: #427764;
@@ -83,7 +91,7 @@ a {
   height: 32px;
   place-items: center;
   color: #fff;
-  background: var(--ink);
+  background: linear-gradient(135deg, var(--blue), var(--purple));
   border-radius: 999px;
 }
 
@@ -115,14 +123,39 @@ a {
 .nav-cta,
 .button.primary {
   color: #fff;
-  background: var(--primary);
-  border: 1px solid var(--primary);
+  background: linear-gradient(135deg, var(--blue), var(--purple));
+  border: 1px solid transparent;
+  box-shadow: 0 10px 26px rgba(9, 98, 212, 0.18);
 }
 
 .button.outline {
   color: var(--ink);
   background: transparent;
   border: 1px solid var(--hairline-strong);
+}
+
+.button.accent-blue,
+.button.accent-purple,
+.button.accent-orange,
+.button.accent-green {
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.button.accent-blue {
+  background: linear-gradient(135deg, #2b9cff, var(--blue));
+}
+
+.button.accent-purple {
+  background: linear-gradient(135deg, #9c4df4, var(--purple));
+}
+
+.button.accent-orange {
+  background: linear-gradient(135deg, #ff9f1c, var(--orange));
+}
+
+.button.accent-green {
+  background: linear-gradient(135deg, #24c58a, var(--green));
 }
 
 .nav-cta:hover,
@@ -491,7 +524,7 @@ dialog {
 
 input[type="range"] {
   width: 100%;
-  accent-color: var(--ink);
+  accent-color: var(--blue);
 }
 
 .confidence-meter {
@@ -529,7 +562,7 @@ input[type="range"] {
   display: block;
   width: 30%;
   height: 100%;
-  background: var(--ink);
+  background: linear-gradient(90deg, var(--blue), var(--green));
   border-radius: inherit;
   transition: width 180ms ease;
 }
@@ -556,7 +589,7 @@ input[type="range"] {
 .toggle-row input {
   width: 18px;
   height: 18px;
-  accent-color: var(--ink);
+  accent-color: var(--purple);
 }
 
 .target-options {
@@ -594,9 +627,21 @@ input[type="range"] {
   display: block;
   width: 20%;
   height: 100%;
-  background: var(--ink);
+  background: linear-gradient(90deg, var(--blue), var(--purple));
   border-radius: inherit;
   transition: width 180ms ease;
+}
+
+.budget-row:nth-child(2) i {
+  background: linear-gradient(90deg, var(--purple), var(--orange));
+}
+
+.budget-row:nth-child(3) i {
+  background: linear-gradient(90deg, var(--orange), var(--green));
+}
+
+.budget-row:nth-child(4) i {
+  background: linear-gradient(90deg, var(--blue), var(--green));
 }
 
 .budget-row b {
@@ -712,6 +757,22 @@ input[type="range"] {
   bottom: 22%;
 }
 
+.map-image-card {
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  aspect-ratio: 1 / 1;
+}
+
+.map-image-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .target-benefits {
   display: grid;
   grid-template-columns: 220px 1fr;
@@ -719,7 +780,8 @@ input[type="range"] {
   margin-top: 16px;
   padding: 22px;
   background:
-    radial-gradient(circle at 92% 20%, rgba(167, 229, 211, 0.32), transparent 24%),
+    radial-gradient(circle at 92% 20%, rgba(36, 197, 138, 0.22), transparent 24%),
+    radial-gradient(circle at 0% 100%, rgba(43, 156, 255, 0.16), transparent 28%),
     var(--surface);
   border: 1px solid var(--hairline);
   border-radius: 16px;
@@ -734,8 +796,10 @@ input[type="range"] {
   display: block;
   margin-top: 16px;
   padding: 22px;
-  background: var(--ink);
-  border: 1px solid var(--ink);
+  background:
+    radial-gradient(circle at 90% 20%, rgba(255, 159, 28, 0.28), transparent 28%),
+    linear-gradient(135deg, #062b64, #391a86);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   box-shadow: var(--shadow);
 }
@@ -775,6 +839,36 @@ input[type="range"] {
   border: 1px solid var(--hairline);
   border-radius: 16px;
   box-shadow: var(--shadow);
+}
+
+.impact-grid article:nth-child(1),
+.pricing-matrix article:nth-child(1),
+.market-kpis article:nth-child(1) {
+  border-top: 4px solid var(--blue);
+}
+
+.impact-grid article:nth-child(2),
+.pricing-matrix article:nth-child(2),
+.market-kpis article:nth-child(2) {
+  border-top: 4px solid var(--purple);
+}
+
+.impact-grid article:nth-child(3),
+.pricing-matrix article:nth-child(3),
+.market-kpis article:nth-child(3) {
+  border-top: 4px solid var(--orange);
+}
+
+.impact-grid article:nth-child(4) {
+  border-top: 4px solid var(--green);
+}
+
+.impact-grid article:nth-child(5) {
+  border-top: 4px solid var(--sky);
+}
+
+.impact-grid article:nth-child(6) {
+  border-top: 4px solid var(--rose);
 }
 
 .impact-grid span {
@@ -1186,6 +1280,9 @@ th {
 
 .market-score-card {
   padding: 30px;
+  background:
+    radial-gradient(circle at 88% 18%, rgba(43, 156, 255, 0.2), transparent 30%),
+    var(--surface);
 }
 
 .market-score-card strong {
@@ -1247,7 +1344,9 @@ th {
 
 .rank-card.is-best {
   color: #fff;
-  background: var(--ink);
+  background:
+    radial-gradient(circle at 92% 92%, rgba(43, 156, 255, 0.28), transparent 34%),
+    linear-gradient(135deg, #061f49, #082347);
 }
 
 .rank-card.is-best p,
@@ -1284,8 +1383,16 @@ th {
 .rank-bars em {
   display: block;
   height: 100%;
-  background: currentColor;
+  background: linear-gradient(90deg, var(--blue), var(--purple));
   border-radius: inherit;
+}
+
+.rank-card:nth-child(2) .rank-bars em {
+  background: linear-gradient(90deg, var(--orange), var(--green));
+}
+
+.rank-card:nth-child(3) .rank-bars em {
+  background: linear-gradient(90deg, var(--purple), var(--orange));
 }
 
 .market-map-grid {
@@ -1297,6 +1404,10 @@ th {
   min-height: 420px;
 }
 
+.market-map img {
+  min-height: 0;
+}
+
 .market-insights {
   display: grid;
   gap: 16px;
@@ -1304,6 +1415,21 @@ th {
 
 .market-insights article {
   padding: 22px;
+}
+
+.market-insights article:nth-child(1) {
+  background: linear-gradient(135deg, var(--blue-soft), #fff);
+  border-color: rgba(9, 98, 212, 0.2);
+}
+
+.market-insights article:nth-child(2) {
+  background: linear-gradient(135deg, var(--purple-soft), #fff);
+  border-color: rgba(109, 40, 217, 0.2);
+}
+
+.market-insights article:nth-child(3) {
+  background: linear-gradient(135deg, var(--orange-soft), #fff);
+  border-color: rgba(249, 115, 22, 0.2);
 }
 
 .market-table table {
@@ -1317,6 +1443,18 @@ th {
 .pricing-matrix article,
 .recommendation-grid article {
   padding: 24px;
+}
+
+.recommendation-grid article:nth-child(1) {
+  border-top: 4px solid var(--blue);
+}
+
+.recommendation-grid article:nth-child(2) {
+  border-top: 4px solid var(--orange);
+}
+
+.recommendation-grid article:nth-child(3) {
+  border-top: 4px solid var(--purple);
 }
 
 .pricing-matrix h3 {

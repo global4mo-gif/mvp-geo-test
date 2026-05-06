@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 1254" role="img" aria-labelledby="title desc">
+  <title id="title">Санкт-Петербург: Комендантский проспект, Приморская, Дыбенко</title>
+  <desc id="desc">Стилизованная карта Санкт-Петербурга с тремя отмеченными локациями.</desc>
+  <defs>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#0b2142" flood-opacity=".18"/>
+    </filter>
+    <filter id="pinShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="10" stdDeviation="6" flood-color="#0b2142" flood-opacity=".22"/>
+    </filter>
+    <linearGradient id="water" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a9ddff"/>
+      <stop offset="1" stop-color="#68b6e8"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9c4df4"/>
+      <stop offset="1" stop-color="#5a22b8"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2b9cff"/>
+      <stop offset="1" stop-color="#0962d4"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff8a00"/>
+      <stop offset="1" stop-color="#f04400"/>
+    </linearGradient>
+    <pattern id="roads" width="80" height="80" patternUnits="userSpaceOnUse" patternTransform="rotate(17)">
+      <path d="M0 20H80M0 55H80" fill="none" stroke="#c7ccd3" stroke-width="3" opacity=".8"/>
+      <path d="M20 0V80M58 0V80" fill="none" stroke="#e1e4e8" stroke-width="2" opacity=".9"/>
+    </pattern>
+  </defs>
+  <rect width="1254" height="1254" fill="#fffdf8"/>
+  <text x="627" y="100" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="68" font-weight="800" fill="#082347">Санкт-Петербург</text>
+  <path d="M50 74H285" stroke="#285b90" stroke-width="2"/>
+  <path d="M995 74H1204" stroke="#285b90" stroke-width="2"/>
+  <circle cx="300" cy="74" r="4" fill="#285b90"/>
+  <circle cx="980" cy="74" r="4" fill="#285b90"/>
+  <path d="M0 168C74 193 129 194 204 150C236 132 255 138 292 154C390 196 466 148 558 132C638 118 709 148 776 130C852 110 931 150 1008 180C1085 210 1148 204 1214 242C1262 270 1263 370 1206 410C1150 448 1160 532 1218 576C1274 620 1264 712 1198 748C1132 785 1122 873 1170 927C1214 977 1177 1057 1106 1060C1028 1064 994 1122 919 1136C836 1152 773 1110 690 1136C595 1166 530 1116 443 1142C357 1168 295 1113 210 1083C148 1061 104 1014 108 950C112 872 48 834 41 760C35 690 101 660 86 590C73 527 17 494 12 425C7 354 66 315 58 256C54 226 27 198 0 168Z" fill="#f9f8f3" stroke="#80b7df" stroke-width="3"/>
+  <path d="M0 178C83 201 127 198 203 155C244 131 265 153 316 168C409 198 468 154 558 136C640 120 706 151 781 132C870 110 933 159 1010 184C1082 208 1154 208 1212 244C1249 267 1249 347 1199 382C1139 423 1146 529 1208 576C1263 618 1247 692 1191 724C1115 768 1119 869 1162 925C1194 967 1161 1033 1099 1038C1016 1044 980 1099 914 1111C824 1128 773 1086 688 1114C597 1144 533 1089 446 1119C358 1150 290 1088 218 1063C157 1042 130 997 132 947C136 858 69 829 65 755C61 686 127 654 112 588C96 517 42 483 38 423C34 362 95 318 91 260C88 220 31 199 0 178Z" fill="url(#roads)" opacity=".95"/>
+  <path d="M0 176C92 196 153 194 237 174C330 151 366 224 456 236C538 247 606 224 692 230C794 237 857 302 953 316C1060 332 1140 314 1254 356V0H0Z" fill="#ffffff" opacity=".45"/>
+  <path d="M0 174C88 203 142 205 224 160C273 134 301 168 349 188C441 226 512 175 593 166C688 154 745 190 825 176C900 162 961 205 1034 226C1118 250 1183 244 1254 294V0H0Z" fill="none" stroke="#79b8e1" stroke-width="4"/>
+  <path d="M0 410C90 405 159 432 224 492C305 568 402 553 494 505C580 461 665 464 742 528C828 600 905 606 1004 576C1098 548 1179 558 1254 604" fill="none" stroke="url(#water)" stroke-width="48" opacity=".8"/>
+  <path d="M84 950C193 880 296 869 403 914C516 962 613 934 724 895C838 855 955 820 1102 838C1159 845 1205 860 1254 882" fill="none" stroke="url(#water)" stroke-width="42" opacity=".7"/>
+  <path d="M470 500C512 566 502 629 456 696C409 764 420 828 479 900" fill="none" stroke="#7bc3ef" stroke-width="24" opacity=".75"/>
+  <g fill="#b9d9b2" opacity=".62">
+    <path d="M219 158l46-33 45 16-24 62-58 18z"/>
+    <path d="M600 200l48-28 46 22 2 56-62 20z"/>
+    <path d="M1039 302l81-26 52 48-47 62-76-15z"/>
+    <path d="M750 862l78-31 60 37-22 71-78 7z"/>
+    <path d="M330 992l69-35 64 34-40 74-78-1z"/>
+    <path d="M1045 748l61-39 57 26-28 68-70 12z"/>
+    <path d="M192 698l78-18 47 44-50 55-77-17z"/>
+  </g>
+  <g fill="none" stroke="#bfc5cc" stroke-linecap="round" opacity=".78">
+    <path d="M240 246C445 286 642 303 847 282C984 268 1086 282 1198 328" stroke-width="7"/>
+    <path d="M195 352C368 392 522 421 683 420C864 419 1018 431 1188 492" stroke-width="5"/>
+    <path d="M250 870C410 766 526 701 642 596C735 512 814 424 927 326" stroke-width="5"/>
+    <path d="M519 175C497 333 493 512 502 710C509 862 531 1001 559 1135" stroke-width="5"/>
+    <path d="M760 205C739 385 735 532 760 674C792 855 825 978 858 1118" stroke-width="5"/>
+    <path d="M984 250C963 388 952 544 990 711C1019 836 1063 932 1126 1030" stroke-width="5"/>
+  </g>
+  <text x="116" y="516" font-family="Inter, Arial, sans-serif" font-size="26" fill="#4f8cbd">Финский</text>
+  <text x="134" y="548" font-family="Inter, Arial, sans-serif" font-size="26" fill="#4f8cbd">залив</text>
+  <g filter="url(#pinShadow)">
+    <path d="M348 236c0-36 29-65 65-65s65 29 65 65c0 57-65 104-65 104s-65-47-65-104z" fill="url(#purple)"/>
+    <circle cx="413" cy="237" r="26" fill="#fff"/>
+    <path d="M489 229h135c11 0 20 9 20 20v64c0 11-9 20-20 20H489l-23 22v-32h-48c-11 0-20-9-20-20v-54c0-11 9-20 20-20h48v-30z" fill="#fff" stroke="#6021c5" stroke-width="3"/>
+    <text x="420" y="266" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" fill="#081f48">Комендантский</text>
+    <text x="420" y="300" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" fill="#081f48">проспект</text>
+  </g>
+  <g filter="url(#pinShadow)">
+    <path d="M232 620c0-34 28-62 62-62s62 28 62 62c0 54-62 99-62 99s-62-45-62-99z" fill="url(#blue)"/>
+    <circle cx="294" cy="621" r="24" fill="#fff"/>
+    <path d="M374 613h118c10 0 18 8 18 18v42c0 10-8 18-18 18H374l-22 20v-28h-35c-10 0-18-8-18-18v-34c0-10 8-18 18-18h35v-25z" fill="#fff" stroke="#0962d4" stroke-width="3"/>
+    <text x="323" y="657" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" fill="#081f48">Приморская</text>
+  </g>
+  <g filter="url(#pinShadow)">
+    <path d="M954 827c0-34 28-62 62-62s62 28 62 62c0 54-62 99-62 99s-62-45-62-99z" fill="url(#orange)"/>
+    <circle cx="1016" cy="828" r="24" fill="#fff"/>
+    <path d="M1095 820h101c10 0 18 8 18 18v42c0 10-8 18-18 18h-101l-22 20v-28h-30c-10 0-18-8-18-18v-34c0-10 8-18 18-18h30v-25z" fill="#fff" stroke="#f04f00" stroke-width="3"/>
+    <text x="1055" y="863" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" fill="#081f48">Дыбенко</text>
+  </g>
+</svg>
