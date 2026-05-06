@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Минималистичная презентация тестового запуска стартапа: маркетинговая упаковка, лендинг, сбор заявок и geo-тест по локациям."
+    />
+    <title>MVP Geo Test | Тестовый запуск стартапа</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="MVP Geo Test">
+        <span class="brand-mark">M</span>
+        <span>MVP Geo Test</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Главная навигация">
+        <a href="#logic">Логика</a>
+        <a href="#scope">Работы</a>
+        <a href="#budget">Бюджет</a>
+        <a href="#demo">Демо</a>
+        <a class="nav-cta" href="#contact">Зафиксировать запуск</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="hero-copy">
+          <p class="eyebrow">Не классический geo-split</p>
+          <h1>Тестовый запуск стартапа вместо простого запуска рекламы</h1>
+          <p class="hero-lead">
+            Сначала собираем минимально жизнеспособную маркетинговую упаковку,
+            затем проверяем спрос в выбранных географиях и принимаем решение о масштабировании.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#budget">Посмотреть бюджет</a>
+            <button class="button outline" type="button" data-modal="summary-modal">Коротко о подходе</button>
+          </div>
+        </div>
+        <aside class="signal-panel" aria-label="Сводка проекта">
+          <div class="signal-top">
+            <span>Startup launch test</span>
+            <button class="icon-button" type="button" data-tooltip="Geo-split будет иметь смысл после базовой упаковки и лендинга.">?</button>
+          </div>
+          <div class="signal-visual" aria-hidden="true">
+            <div class="pulse-line"></div>
+            <div class="bars">
+              <i style="height: 34%"></i>
+              <i style="height: 70%"></i>
+              <i style="height: 46%"></i>
+              <i style="height: 86%"></i>
+              <i style="height: 58%"></i>
+              <i style="height: 76%"></i>
+              <i style="height: 40%"></i>
+              <i style="height: 64%"></i>
+              <i style="height: 52%"></i>
+              <i style="height: 92%"></i>
+              <i style="height: 62%"></i>
+              <i style="height: 78%"></i>
+            </div>
+          </div>
+          <div class="metrics-grid">
+            <div>
+              <strong>3</strong>
+              <span>локации</span>
+            </div>
+            <div>
+              <strong>100k ₽</strong>
+              <span>медиабюджет</span>
+            </div>
+            <div>
+              <strong>290-300k ₽</strong>
+              <span>диапазон</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="logic" class="section-shell split-section">
+        <div>
+          <p class="eyebrow">Почему меняется логика</p>
+          <h2>Перед geo-split нужно собрать то, что будет тестироваться</h2>
+        </div>
+        <div class="comparison">
+          <article>
+            <span class="badge">Обычно</span>
+            <h3>Классический geo-split</h3>
+            <p>Есть продукт, бренд, креативы, посадочная страница и понятный путь клиента.</p>
+          </article>
+          <article class="featured">
+            <span class="badge">В вашем случае</span>
+            <h3>MVP маркетинговой упаковки</h3>
+            <p>Проект на стадии стартапа, поэтому сначала создаём основу: смыслы, оффер, лендинг и сбор заявок.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="scope" class="section-shell">
+        <div class="section-heading">
+          <p class="eyebrow">Состав работ</p>
+          <h2>Маршрут запуска</h2>
+          <p>Каждый этап можно раскрыть: внутри показана роль этапа в проверке спроса.</p>
+        </div>
+        <div class="timeline" data-active-step="0">
+          <button class="step is-active" type="button" data-step="0">
+            <span>01</span>
+            <strong>Упаковка</strong>
+            <small>Название, позиционирование, оффер, смыслы, первичные креативы.</small>
+          </button>
+          <button class="step" type="button" data-step="1">
+            <span>02</span>
+            <strong>Лендинг</strong>
+            <small>Превращаем упаковку в страницу с понятным сценарием заявки.</small>
+          </button>
+          <button class="step" type="button" data-step="2">
+            <span>03</span>
+            <strong>Предзаказ</strong>
+            <small>Подключаем форму сбора заявок или предзаказов.</small>
+          </button>
+          <button class="step" type="button" data-step="3">
+            <span>04</span>
+            <strong>Спрос</strong>
+            <small>Собираем запросы и логику спроса по каждой локации.</small>
+          </button>
+          <button class="step" type="button" data-step="4">
+            <span>05</span>
+            <strong>Реклама</strong>
+            <small>Настраиваем географии, запускаем тест и следим за реакцией.</small>
+          </button>
+        </div>
+        <div class="stage-detail" id="stage-detail" aria-live="polite"></div>
+      </section>
+
+      <section id="budget" class="section-shell budget-section">
+        <div class="section-heading">
+          <p class="eyebrow">Предварительная структура</p>
+          <h2>Бюджет 290-300 тысяч рублей</h2>
+          <p>Передвиньте рекламный бюджет, чтобы увидеть, как меняется общая оценка и доля по локациям.</p>
+        </div>
+        <div class="budget-layout">
+          <div class="budget-card total-card">
+            <span class="label">Итого</span>
+            <strong id="total-budget">300 000 ₽</strong>
+            <p>Команда, лендинг и рекламный тест в трёх географиях.</p>
+            <label for="ad-slider">Рекламный бюджет</label>
+            <input id="ad-slider" type="range" min="75000" max="150000" step="5000" value="100000" />
+            <div class="slider-row">
+              <span>75k ₽</span>
+              <span>150k ₽</span>
+            </div>
+          </div>
+          <div class="budget-bars" aria-label="Диаграмма бюджета">
+            <div class="budget-row" data-base="150000">
+              <span>Команда из 3 человек</span>
+              <div><i id="team-bar"></i></div>
+              <b>150 000 ₽</b>
+            </div>
+            <div class="budget-row" data-base="50000">
+              <span>Разработка лендинга</span>
+              <div><i id="landing-bar"></i></div>
+              <b>50 000 ₽</b>
+            </div>
+            <div class="budget-row">
+              <span>Реклама на 3 локации</span>
+              <div><i id="ad-bar"></i></div>
+              <b id="ad-budget">100 000 ₽</b>
+            </div>
+          </div>
+        </div>
+        <div class="location-cards">
+          <article>
+            <span>Локация A</span>
+            <strong id="loc-a">33 333 ₽</strong>
+          </article>
+          <article>
+            <span>Локация B</span>
+            <strong id="loc-b">33 333 ₽</strong>
+          </article>
+          <article>
+            <span>Локация C</span>
+            <strong id="loc-c">33 333 ₽</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell ai-section">
+        <div>
+          <p class="eyebrow">Роль нейросетей</p>
+          <h2>AI ускоряет этапы, но не заменяет стратегию</h2>
+          <p>
+            Нейросети помогают быстрее собрать варианты смыслов, креативов и текстов,
+            но стратегию, контроль качества, настройку теста и анализ результата всё равно делает команда.
+          </p>
+        </div>
+        <div class="ai-grid">
+          <button type="button" data-modal="ai-copy">Смыслы и тексты</button>
+          <button type="button" data-modal="ai-creative">Креативы</button>
+          <button type="button" data-modal="ai-analysis">Аналитика</button>
+        </div>
+      </section>
+
+      <section id="demo" class="section-shell demo-section">
+        <div class="section-heading">
+          <p class="eyebrow">Демонстрация страниц</p>
+          <h2>Как может выглядеть путь клиента</h2>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Демо страниц">
+          <button class="tab is-active" type="button" role="tab" aria-selected="true" data-page="landing">Лендинг</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-page="preorder">Предзаказ</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-page="report">Отчёт</button>
+        </div>
+        <div class="page-preview" id="page-preview"></div>
+      </section>
+
+      <section id="contact" class="section-shell cta-section">
+        <p class="eyebrow">Следующий шаг</p>
+        <h2>Зафиксировать состав работ, сроки и перейти к подготовке запуска</h2>
+        <form class="launch-form">
+          <label>
+            Имя проекта
+            <input type="text" value="MVP Geo Test" />
+          </label>
+          <label>
+            Количество локаций
+            <select>
+              <option>3 локации</option>
+              <option>2 локации</option>
+              <option>4 локации</option>
+            </select>
+          </label>
+          <button class="button primary" type="button" data-modal="launch-modal">Подготовить запуск</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>MVP Geo Test</span>
+      <span>Маркетинговая упаковка, лендинг и проверка спроса по географиям.</span>
+    </footer>
+
+    <div class="tooltip" id="tooltip" role="tooltip"></div>
+
+    <dialog id="summary-modal">
+      <button class="modal-close" type="button" data-close>×</button>
+      <h3>Коротко</h3>
+      <p>Это не задача “запустить рекламу”. Это небольшой тестовый запуск стартапа: сначала собираем основу, затем проверяем спрос и считаем реакцию аудитории.</p>
+    </dialog>
+    <dialog id="ai-copy">
+      <button class="modal-close" type="button" data-close>×</button>
+      <h3>Смыслы и тексты</h3>
+      <p>AI ускоряет черновики названия, оффера и гипотез, но финальная упаковка должна пройти редактуру и стратегическую проверку.</p>
+    </dialog>
+    <dialog id="ai-creative">
+      <button class="modal-close" type="button" data-close>×</button>
+      <h3>Креативы</h3>
+      <p>Можно быстро собрать первичные визуальные направления, но важно вручную отфильтровать обещания, тональность и соответствие продукту.</p>
+    </dialog>
+    <dialog id="ai-analysis">
+      <button class="modal-close" type="button" data-close>×</button>
+      <h3>Аналитика</h3>
+      <p>После запуска команда смотрит не только на цену заявки, но и на качество реакции, запросы, возражения и различия между локациями.</p>
+    </dialog>
+    <dialog id="launch-modal">
+      <button class="modal-close" type="button" data-close>×</button>
+      <h3>Готово к следующему шагу</h3>
+      <p>Следующий рабочий документ: состав работ, сроки, ответственность команды и параметры рекламного теста.</p>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
