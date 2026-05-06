@@ -58,6 +58,7 @@ const stageDetail = document.querySelector("#stage-detail");
 const stepButtons = document.querySelectorAll(".step");
 
 function renderStep(index) {
+  if (!stageDetail) return;
   const step = steps[index];
   stageDetail.innerHTML = `
     <h3>${step.title}</h3>
@@ -71,7 +72,9 @@ stepButtons.forEach((button) => {
   button.addEventListener("click", () => renderStep(Number(button.dataset.step)));
 });
 
-renderStep(0);
+if (stageDetail) {
+  renderStep(0);
+}
 
 const adSlider = document.querySelector("#ad-slider");
 const targetToggle = document.querySelector("#target-toggle");
@@ -91,6 +94,7 @@ const targetRow = document.querySelector("#target-row");
 const locationNodes = [document.querySelector("#loc-a"), document.querySelector("#loc-b"), document.querySelector("#loc-c")];
 
 function updateBudget() {
+  if (!adSlider) return;
   const adValue = Number(adSlider.value);
   const targetingEnabled = targetToggle.checked;
   const targetValue = targetingEnabled ? Number(targetSlider.value) : 0;
@@ -119,15 +123,18 @@ function updateBudget() {
   });
 }
 
-adSlider.addEventListener("input", updateBudget);
-targetSlider.addEventListener("input", updateBudget);
-targetToggle.addEventListener("change", updateBudget);
-updateBudget();
+if (adSlider) {
+  adSlider.addEventListener("input", updateBudget);
+  targetSlider.addEventListener("input", updateBudget);
+  targetToggle.addEventListener("change", updateBudget);
+  updateBudget();
+}
 
 const preview = document.querySelector("#page-preview");
 const tabs = document.querySelectorAll(".tab");
 
 function renderPreview(key) {
+  if (!preview) return;
   const page = previews[key];
   preview.innerHTML = `
     <div class="preview-frame">
@@ -166,7 +173,9 @@ tabs.forEach((tab) => {
   });
 });
 
-renderPreview("landing");
+if (preview) {
+  renderPreview("landing");
+}
 
 document.addEventListener("click", (event) => {
   const modalButton = event.target.closest("[data-modal]");
@@ -191,6 +200,7 @@ const tooltip = document.querySelector("#tooltip");
 
 document.querySelectorAll("[data-tooltip]").forEach((element) => {
   element.addEventListener("mouseenter", () => {
+    if (!tooltip) return;
     const rect = element.getBoundingClientRect();
     tooltip.textContent = element.dataset.tooltip;
     tooltip.style.left = `${Math.min(rect.left, window.innerWidth - 280)}px`;
@@ -205,15 +215,17 @@ document.querySelectorAll("[data-tooltip]").forEach((element) => {
 const navToggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector("#site-nav");
 
-navToggle.addEventListener("click", () => {
-  const expanded = navToggle.getAttribute("aria-expanded") === "true";
-  navToggle.setAttribute("aria-expanded", String(!expanded));
-  nav.classList.toggle("is-open");
-});
+if (navToggle && nav) {
+  navToggle.addEventListener("click", () => {
+    const expanded = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", String(!expanded));
+    nav.classList.toggle("is-open");
+  });
 
-nav.addEventListener("click", (event) => {
-  if (event.target.matches("a")) {
-    nav.classList.remove("is-open");
-    navToggle.setAttribute("aria-expanded", "false");
-  }
-});
+  nav.addEventListener("click", (event) => {
+    if (event.target.matches("a")) {
+      nav.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+}

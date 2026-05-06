@@ -730,6 +730,34 @@ input[type="range"] {
   margin-bottom: 0;
 }
 
+.district-link-card {
+  display: block;
+  margin-top: 16px;
+  padding: 22px;
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.district-link-card,
+.district-link-card p,
+.district-link-card .badge {
+  color: #fff;
+}
+
+.district-link-card strong {
+  display: block;
+  margin: 10px 0;
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.district-link-card p {
+  margin-bottom: 0;
+  opacity: 0.78;
+}
+
 .budget-impact {
   margin-top: 64px;
 }
@@ -1135,6 +1163,188 @@ th {
     var(--surface);
 }
 
+.market-hero {
+  display: grid;
+  grid-template-columns: 1.22fr 0.78fr;
+  gap: 48px;
+  align-items: center;
+  min-height: clamp(620px, 76vh, 760px);
+}
+
+.market-score-card,
+.market-kpis article,
+.rank-card,
+.market-insights article,
+.pricing-matrix article,
+.recommendation-grid article,
+.market-cta {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.market-score-card {
+  padding: 30px;
+}
+
+.market-score-card strong {
+  display: block;
+  margin: 18px 0 10px;
+  font-family: "EB Garamond", serif;
+  font-size: 58px;
+  font-weight: 400;
+  line-height: 0.96;
+}
+
+.market-kpis,
+.district-rank,
+.market-map-grid,
+.pricing-matrix,
+.recommendation-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.market-kpis {
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 16px;
+}
+
+.market-kpis article {
+  padding: 22px;
+}
+
+.market-kpis span,
+.rank-card span,
+.market-insights span,
+.pricing-matrix span,
+.recommendation-grid span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+}
+
+.market-kpis strong {
+  display: block;
+  margin: 10px 0;
+  font-family: "EB Garamond", serif;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.district-rank {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.rank-card {
+  min-height: 390px;
+  padding: 24px;
+}
+
+.rank-card.is-best {
+  color: #fff;
+  background: var(--ink);
+}
+
+.rank-card.is-best p,
+.rank-card.is-best span {
+  color: #d6d3d1;
+}
+
+.rank-bars {
+  display: grid;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.rank-bars label {
+  display: grid;
+  gap: 8px;
+  color: inherit;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.rank-bars i {
+  display: block;
+  height: 10px;
+  overflow: hidden;
+  background: var(--surface-strong);
+  border-radius: 999px;
+}
+
+.rank-card.is-best .rank-bars i {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.rank-bars em {
+  display: block;
+  height: 100%;
+  background: currentColor;
+  border-radius: inherit;
+}
+
+.market-map-grid {
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: stretch;
+}
+
+.market-map {
+  min-height: 420px;
+}
+
+.market-insights {
+  display: grid;
+  gap: 16px;
+}
+
+.market-insights article {
+  padding: 22px;
+}
+
+.market-table table {
+  min-width: 920px;
+}
+
+.pricing-matrix {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.pricing-matrix article,
+.recommendation-grid article {
+  padding: 24px;
+}
+
+.pricing-matrix h3 {
+  font-family: "EB Garamond", serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.recommendation-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.recommendation-grid article {
+  display: flex;
+  min-height: 330px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.recommendation-grid .button {
+  margin-top: auto;
+}
+
+.market-cta {
+  padding: 48px;
+}
+
 .cta-section {
   padding: 48px;
 }
@@ -1217,9 +1427,11 @@ dialog::backdrop {
 
 @media (max-width: 940px) {
   .hero,
+  .market-hero,
   .split-section,
   .budget-layout,
   .geo-layout,
+  .market-map-grid,
   .ai-section,
   .doc-hero,
   .doc-columns,
@@ -1230,6 +1442,10 @@ dialog::backdrop {
   .timeline,
   .ai-grid,
   .impact-grid,
+  .market-kpis,
+  .district-rank,
+  .pricing-matrix,
+  .recommendation-grid,
   .doc-flow,
   .doc-grid,
   .doc-budget-cards,
@@ -1291,6 +1507,10 @@ dialog::backdrop {
   .stage-detail ul,
   .location-cards,
   .impact-grid,
+  .market-kpis,
+  .district-rank,
+  .pricing-matrix,
+  .recommendation-grid,
   .metrics-grid,
   .ai-grid,
   .doc-flow,
