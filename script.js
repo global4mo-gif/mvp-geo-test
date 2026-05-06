@@ -74,32 +74,54 @@ stepButtons.forEach((button) => {
 renderStep(0);
 
 const adSlider = document.querySelector("#ad-slider");
+const targetToggle = document.querySelector("#target-toggle");
+const targetOptions = document.querySelector("#target-options");
+const targetSlider = document.querySelector("#target-slider");
+const targetBenefits = document.querySelector("#target-benefits");
 const totalBudget = document.querySelector("#total-budget");
 const adBudget = document.querySelector("#ad-budget");
+const targetBudget = document.querySelector("#target-budget");
+const confidenceLabel = document.querySelector("#confidence-label");
+const confidenceBar = document.querySelector("#confidence-bar");
 const teamBar = document.querySelector("#team-bar");
 const landingBar = document.querySelector("#landing-bar");
 const adBar = document.querySelector("#ad-bar");
+const targetBar = document.querySelector("#target-bar");
+const targetRow = document.querySelector("#target-row");
 const locationNodes = [document.querySelector("#loc-a"), document.querySelector("#loc-b"), document.querySelector("#loc-c")];
 
 function updateBudget() {
   const adValue = Number(adSlider.value);
+  const targetingEnabled = targetToggle.checked;
+  const targetValue = targetingEnabled ? Number(targetSlider.value) : 0;
   const team = 150000;
-  const landing = 50000;
-  const total = team + landing + adValue;
-  const max = Math.max(team, landing, adValue);
+  const landing = 40000;
+  const total = team + landing + adValue + targetValue;
+  const max = Math.max(team, landing, adValue, targetValue || 1);
+  const confidence = Math.min(100, Math.round(((adValue + targetValue) - 75000) / 175000 * 70 + 30));
+  const label = confidence >= 80 ? "Высокая" : confidence >= 58 ? "Уверенная" : "Минимально рабочая";
 
   totalBudget.textContent = formatRub(total);
   adBudget.textContent = formatRub(adValue);
+  targetBudget.textContent = formatRub(targetValue);
+  confidenceLabel.textContent = label;
+  confidenceBar.style.width = `${confidence}%`;
   teamBar.style.width = `${(team / max) * 100}%`;
   landingBar.style.width = `${(landing / max) * 100}%`;
   adBar.style.width = `${(adValue / max) * 100}%`;
+  targetBar.style.width = `${(targetValue / max) * 100}%`;
+  targetOptions.hidden = !targetingEnabled;
+  targetBenefits.hidden = !targetingEnabled;
+  targetRow.classList.toggle("is-muted", !targetingEnabled);
 
   locationNodes.forEach((node) => {
-    node.textContent = formatRub(adValue / 3);
+    node.textContent = formatRub((adValue + targetValue) / 3);
   });
 }
 
 adSlider.addEventListener("input", updateBudget);
+targetSlider.addEventListener("input", updateBudget);
+targetToggle.addEventListener("change", updateBudget);
 updateBudget();
 
 const preview = document.querySelector("#page-preview");

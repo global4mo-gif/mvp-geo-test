@@ -82,8 +82,8 @@
               <span>медиабюджет</span>
             </div>
             <div>
-              <strong>290-300k ₽</strong>
-              <span>диапазон</span>
+              <strong>от 290k ₽</strong>
+              <span>базовый бюджет</span>
             </div>
           </div>
         </aside>
@@ -147,19 +147,38 @@
       <section id="budget" class="section-shell budget-section">
         <div class="section-heading">
           <p class="eyebrow">Предварительная структура</p>
-          <h2>Бюджет 290-300 тысяч рублей</h2>
-          <p>Передвиньте рекламный бюджет, чтобы увидеть, как меняется общая оценка и доля по локациям.</p>
+          <h2>Бюджет от 290 тысяч рублей</h2>
+          <p>Передвиньте рекламный бюджет и включите таргетинг, чтобы увидеть, как меняется итог, точность прогноза и доля по районам.</p>
         </div>
         <div class="budget-layout">
           <div class="budget-card total-card">
             <span class="label">Итого</span>
-            <strong id="total-budget">300 000 ₽</strong>
-            <p>Команда, лендинг и рекламный тест в трёх географиях.</p>
+            <strong id="total-budget">290 000 ₽</strong>
+            <p>Команда, лендинг и рекламный тест в трёх районах Санкт-Петербурга.</p>
+            <div class="confidence-meter">
+              <div>
+                <span>Точность расчётов и прогнозов</span>
+                <b id="confidence-label">Минимально рабочая</b>
+              </div>
+              <i><em id="confidence-bar"></em></i>
+            </div>
             <label for="ad-slider">Рекламный бюджет</label>
             <input id="ad-slider" type="range" min="75000" max="150000" step="5000" value="100000" />
             <div class="slider-row">
               <span>75k ₽</span>
               <span>150k ₽</span>
+            </div>
+            <label class="toggle-row" for="target-toggle">
+              <input id="target-toggle" type="checkbox" />
+              <span>Добавить опционный таргетинг</span>
+            </label>
+            <div class="target-options" id="target-options" hidden>
+              <label for="target-slider">Бюджет таргетинга</label>
+              <input id="target-slider" type="range" min="20000" max="100000" step="5000" value="40000" />
+              <div class="slider-row">
+                <span>20k ₽</span>
+                <span>100k ₽</span>
+              </div>
             </div>
           </div>
           <div class="budget-bars" aria-label="Диаграмма бюджета">
@@ -168,31 +187,75 @@
               <div><i id="team-bar"></i></div>
               <b>150 000 ₽</b>
             </div>
-            <div class="budget-row" data-base="50000">
+            <div class="budget-row" data-base="40000">
               <span>Разработка лендинга</span>
               <div><i id="landing-bar"></i></div>
-              <b>50 000 ₽</b>
+              <b>40 000 ₽</b>
             </div>
             <div class="budget-row">
               <span>Реклама на 3 локации</span>
               <div><i id="ad-bar"></i></div>
               <b id="ad-budget">100 000 ₽</b>
             </div>
+            <div class="budget-row target-row is-muted" id="target-row">
+              <span>Опционный таргетинг</span>
+              <div><i id="target-bar"></i></div>
+              <b id="target-budget">0 ₽</b>
+            </div>
           </div>
         </div>
-        <div class="location-cards">
-          <article>
-            <span>Локация A</span>
-            <strong id="loc-a">33 333 ₽</strong>
-          </article>
-          <article>
-            <span>Локация B</span>
-            <strong id="loc-b">33 333 ₽</strong>
-          </article>
-          <article>
-            <span>Локация C</span>
-            <strong id="loc-c">33 333 ₽</strong>
-          </article>
+        <div class="geo-layout">
+          <div class="location-cards">
+            <article>
+              <span>Комендантский проспект</span>
+              <strong id="loc-a">33 333 ₽</strong>
+            </article>
+            <article>
+              <span>Приморская</span>
+              <strong id="loc-b">33 333 ₽</strong>
+            </article>
+            <article>
+              <span>Дыбенко</span>
+              <strong id="loc-c">33 333 ₽</strong>
+            </article>
+          </div>
+          <div class="spb-map" aria-label="Карта тестовых районов Санкт-Петербурга">
+            <div class="river river-main"></div>
+            <div class="river river-branch"></div>
+            <div class="map-pin pin-kom">
+              <b></b>
+              <span>Комендантский</span>
+            </div>
+            <div class="map-pin pin-prim">
+              <b></b>
+              <span>Приморская</span>
+            </div>
+            <div class="map-pin pin-dyb">
+              <b></b>
+              <span>Дыбенко</span>
+            </div>
+          </div>
+        </div>
+        <div class="target-benefits" id="target-benefits" hidden>
+          <span class="badge">Если включить таргетинг</span>
+          <div>
+            <p>Можно точнее разделять аудитории, быстрее понять, какие сегменты реагируют на оффер, и снизить риск выводов по слишком общей рекламе.</p>
+            <p>Дополнительный бюджет помогает не только получить больше лидов, но и повысить уверенность в сравнении районов и сообщений.</p>
+          </div>
+        </div>
+        <div class="budget-impact">
+          <div class="section-heading">
+            <p class="eyebrow">На что влияет увеличение рекламного бюджета</p>
+            <h2>Больше данных — выше уверенность в выводах</h2>
+          </div>
+          <div class="impact-grid">
+            <article><span>01</span><h3>Достоверность теста</h3><p>При маленьком бюджете может быть слишком мало кликов, заявок и реакций. Больше бюджет повышает уверенность в выводах.</p></article>
+            <article><span>02</span><h3>Сравнение локаций</h3><p>Больше данных помогает понять, какой район реально сильнее, где ниже стоимость заявки и где выше интерес.</p></article>
+            <article><span>03</span><h3>Скорость результата</h3><p>Бюджет позволяет быстрее набрать статистику и раньше понять, работает гипотеза или нет.</p></article>
+            <article><span>04</span><h3>Тест сообщений</h3><p>При большем бюджете можно проверять разные офферы, заголовки, креативы, сегменты и посадочные смыслы.</p></article>
+            <article><span>05</span><h3>Обучение алгоритмов</h3><p>Рекламные системы получают больше сигналов о кликах, заявках и аудиториях, которые реагируют лучше.</p></article>
+            <article><span>06</span><h3>Меньше риск ошибки</h3><p>Снижается риск ложного вывода “продукт не нужен рынку”, если проблема была в малом объёме трафика.</p></article>
+          </div>
         </div>
       </section>
 
@@ -408,8 +471,9 @@
             </div>
             <div class="doc-budget-cards">
               <article><span>Команда</span><strong>150 000 ₽</strong><p>Стратегия, упаковка, управление, запуск, аналитика.</p></article>
-              <article><span>Лендинг</span><strong>50 000 ₽</strong><p>Сборка страницы и формы заявки / предзаказа.</p></article>
+              <article><span>Лендинг</span><strong>40 000 ₽</strong><p>Сборка страницы и формы заявки / предзаказа.</p></article>
               <article><span>Реклама</span><strong>100 000 ₽</strong><p>3 локации примерно по 33 000 ₽.</p></article>
+              <article><span>Таргетинг</span><strong>опционально</strong><p>Дополнительная проверка сегментов, сообщений и точности сравнения.</p></article>
             </div>
             <p class="doc-note">Рекомендуемая оплата: 50% на старте, 30% после готовности упаковки и лендинга, 20% перед рекламным тестом или финальной аналитикой.</p>
           </div>
@@ -500,8 +564,9 @@
             ключевые сообщения, структуру лендинга и систему сбора заявок / предзаказов.
           </p>
           <p>
-            Предварительный бюджет составляет около 300 000 ₽: 150 000 ₽ — работа проектной команды,
-            50 000 ₽ — разработка и запуск лендинга, 100 000 ₽ — рекламный бюджет на 3 локации.
+            Предварительный базовый бюджет составляет около 290 000 ₽: 150 000 ₽ — работа проектной команды,
+            40 000 ₽ — разработка и запуск лендинга, 100 000 ₽ — рекламный бюджет на 3 локации.
+            Дополнительно можно включить таргетинг, чтобы точнее проверить сегменты и сообщения.
             Итогом станет не обещание продаж, а ясность: есть ли спрос, где он проявляется,
             что нужно доработать и стоит ли масштабировать проект дальше.
           </p>
