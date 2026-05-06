@@ -1024,6 +1024,13 @@ input[type="range"] {
   line-height: 1;
 }
 
+.doc-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
 .doc-flow {
   grid-template-columns: repeat(3, 1fr);
   margin-bottom: 16px;
