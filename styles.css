@@ -792,6 +792,114 @@ input[type="range"] {
   margin-bottom: 0;
 }
 
+.media-plan-card {
+  margin-top: 18px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.media-plan-head {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 18px;
+}
+
+.media-plan-head h2 {
+  max-width: 820px;
+  margin-bottom: 12px;
+}
+
+.media-total {
+  padding: 20px;
+  background:
+    radial-gradient(circle at 92% 12%, rgba(43, 156, 255, 0.2), transparent 34%),
+    linear-gradient(135deg, var(--blue-soft), #fff);
+  border: 1px solid rgba(9, 98, 212, 0.18);
+  border-radius: 14px;
+}
+
+.media-total span,
+.media-total small {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.media-total strong {
+  display: block;
+  margin: 8px 0;
+  font-family: "EB Garamond", serif;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.media-plan-table table {
+  min-width: 1100px;
+}
+
+.media-plan-table th {
+  color: #fff;
+  background: #4f9ba1;
+  border-color: #2b6e73;
+}
+
+.media-plan-table td {
+  color: var(--ink);
+}
+
+.media-group td {
+  background: var(--canvas-soft);
+  color: var(--body);
+  font-weight: 700;
+}
+
+.media-summary td {
+  background: var(--purple-soft);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.conversion-note {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 24px;
+  align-items: start;
+  margin-top: 20px;
+}
+
+.conversion-note p {
+  font-size: 18px;
+}
+
+.conversion-table {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid var(--hairline-strong);
+  border-radius: 14px;
+}
+
+.conversion-table span {
+  padding: 16px 18px;
+  background: var(--canvas-soft);
+  border-bottom: 1px solid var(--hairline);
+  font-weight: 700;
+}
+
+.conversion-table span:first-child {
+  color: #fff;
+  background: linear-gradient(135deg, #4f9ba1, var(--blue));
+}
+
+.conversion-table span:last-child {
+  border-bottom: 0;
+}
+
 .district-link-card {
   display: block;
   margin-top: 16px;
@@ -1605,6 +1713,11 @@ dialog::backdrop {
   }
 
   .target-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .media-plan-head,
+  .conversion-note {
     grid-template-columns: 1fr;
   }
 
