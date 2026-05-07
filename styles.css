@@ -839,6 +839,26 @@ input[type="range"] {
   line-height: 1;
 }
 
+.frequency-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.frequency-legend span {
+  padding: 8px 10px;
+  background: var(--canvas-soft);
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  color: var(--body);
+  font-size: 13px;
+}
+
+.frequency-legend strong {
+  color: var(--ink);
+}
+
 .media-plan-table table {
   min-width: 1100px;
 }
